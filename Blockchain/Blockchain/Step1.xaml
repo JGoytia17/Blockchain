@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Blockchain.Step1"
+             Title="Step 1">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Blockchain.jpg" Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,20,30,0"/>
+        <Label Text="BLOCKCHAIN" Grid.Row="1" Grid.Column="1" Margin="0,0,30,0" HorizontalOptions="End"/>
+        <Label Text="REGISTER" Grid.Row="2" Margin="20,0,0,0" TextColor="#2C2C80" />
+        <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" Margin="20,0,30,0">
+            <Label Text="MADRE" TextColor="#2C2C80" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Entry x:Name="txtMadre"                
+               HorizontalOptions="FillAndExpand"
+               Grid.Row="4"               
+               TextChanged="Capitalize"
+               Keyboard="Text"                 
+               MaxLength="30" 
+               Placeholder="MADRE" 
+               PlaceholderColor="#A7A7A7" 
+               Margin="20,0,0,0"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2" Margin="20,0,30,0">
+            <Label Text="PADRE" TextColor="#2C2C80" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Entry x:Name="txtPadre"                
+               HorizontalOptions="FillAndExpand"
+               Grid.Row="4"               
+               TextChanged="Capitalize"
+               Keyboard="Text"                 
+               MaxLength="30" 
+               Placeholder="PADRE" 
+               PlaceholderColor="#A7A7A7" 
+               Margin="20,0,0,0"/>
+        </StackLayout>
+
+        <TableView Intent="Form" Grid.Row="5" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" Margin="20,0,30,0" VerticalOptions="Center">
+            <TableRoot>
+                <TableSection Title="DOCTOR"> 
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Picker HorizontalOptions="FillAndExpand" Title="PICK A DOCTOR">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>DOCTOR 1</x:String>
+                                        <x:String>DOCTOR 2</x:String>
+                                        <x:String>DOCTOR 3</x:String>
+                                        <x:String>DOCTOR 4</x:String>
+                                        <x:String>DOCTOR 5</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                            <Image Source="doctor.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="HOSPITAL">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Picker HorizontalOptions="FillAndExpand" Title="PICK A HOSPITAL">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>HOSPITAL 1</x:String>
+                                        <x:String>HOSPITAL 2</x:String>
+                                        <x:String>HOSPITAL 3</x:String>
+                                        <x:String>HOSPITAL 4</x:String>
+                                        <x:String>HOSPITAL 5</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                            <Image Source="ambulance.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+    </Grid>
+
+</ContentPage>

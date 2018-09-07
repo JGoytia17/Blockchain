@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Blockchain.Step3"
+             Title="Step 3">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Blockchain.jpg" Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,20,30,0"/>
+        <Label Text="BLOCKCHAIN" Grid.Row="1" Grid.Column="1" Margin="0,0,30,0" HorizontalOptions="End"/>
+        <Label Text="FINGERPRINT PARENTS" Grid.Row="2" TextColor="#2C2C80" Margin="20,0,0,0"/>
+        <Label Text="FATHER'S" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"/>
+        <Label Text="MOTHER'S" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center"/>
+        <Button x:Name="btnFatherFng" Image="finger.png" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" BackgroundColor="White"/>
+        <Button x:Name="btnMotherFng" Image="finger.png" Grid.Row="4" Grid.Column="1" HorizontalOptions="Center" BackgroundColor="White"/>
+        <Button x:Name="btnSave" Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="20,0,30,0" Text="SAVE" TextColor="White" BackgroundColor="#2196F3"/>
+    </Grid>
+    
+
+</ContentPage>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Blockchain.Step2"
+             Title="Step 2">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Blockchain.jpg" Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,20,30,0"/>
+        <Label Text="BLOCKCHAIN" Grid.Row="1" Grid.Column="1" Margin="0,0,30,0" HorizontalOptions="End"/>
+        <Label Text="REGISTER" TextColor="#2C2C80" Grid.Row="2" Margin="20,0,0,0" />
+        <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="20,0,30,0">
+            <Label Text="DATE:" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#2C2C80"/>
+            <DatePicker x:Name="dPicker" FontSize="Small" HorizontalOptions="FillAndExpand" Format="D"/>
+        </StackLayout>
+        <StackLayout Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="20,0,30,0">
+            <Label Text="HOUR:" TextColor="#2C2C80" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <TimePicker x:Name="tPicker" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="20,0,30,0">
+            <Label Text="NATIONALITY:" TextColor="#2C2C80" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Picker x:Name="pickerNation" HorizontalOptions="FillAndExpand" Title="CHOOSE ONE">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>AMERICAN</x:String>
+                        <x:String>ARGENTINIAN</x:String>
+                        <x:String>AUSTRALIAN</x:String>
+                        <x:String>AUSTRIAN</x:String>
+                        <x:String>BOLIVIAN</x:String>
+                        <x:String>BRAZILIAN</x:String>
+                        <x:String>BRITISH</x:String>
+                        <x:String>CANADIAN</x:String>
+                        <x:String>CHILEAN</x:String>
+                        <x:String>CHINESE</x:String>
+                        <x:String>COLOMBIAN</x:String>
+                        <x:String>COSTA RICAN</x:String>
+                        <x:String>CUBAN</x:String>
+                        <x:String>ECUADOREAN</x:String>
+                        <x:String>EGYPTIAN</x:String>
+                        <x:String>FRENCH</x:String>
+                        <x:String>GERMAN</x:String>
+                        <x:String>GREEK</x:String>
+                        <x:String>GUATEMALAN</x:String>
+                        <x:String>HAITIAN</x:String>
+                        <x:String>DUTCH</x:String>
+                        <x:String>HONDURAN</x:String>
+                        <x:String>INDIAN</x:String>
+                        <x:String>INDONESIAN</x:String>
+                        <x:String>IRANIAN</x:String>
+                        <x:String>IRAQI</x:String>
+                        <x:String>IRISH</x:String>
+                        <x:String>ITALIAN</x:String>
+                        <x:String>JAMAICAN</x:String>
+                        <x:String>JAPANESE</x:String>
+                        <x:String>MEXICAN</x:String>
+                        <x:String>MOROCCAN</x:String>
+                        <x:String>NICARAGUAN</x:String>
+                        <x:String>PERUVIAN</x:String>
+                        <x:String>RUSSIAN</x:String>
+                        <x:String>SAUDI</x:String>
+                        <x:String>SCOTTISH</x:String>
+                        <x:String>SOUTH KOREAN</x:String>
+                        <x:String>SPANISH</x:String>
+                        <x:String>SWISS</x:String>
+                        <x:String>THAI</x:String>
+                        <x:String>TURKISH</x:String>
+                        <x:String>URUGUAYAN</x:String>
+                        <x:String>VENEZUELAN</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+        <StackLayout Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="20,0,30,0">
+            <Label Text="ADDRESS:" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#2C2C80" />
+            <Entry x:Name="txtAddress" HorizontalOptions="FillAndExpand" Placeholder="ADDRESS"/>
+        </StackLayout>
+        <StackLayout Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="20,0,30,0">
+            <Label Text="GENDER:" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#2C2C80"/>
+            <Picker x:Name="pickerGender" HorizontalOptions="FillAndExpand" Title="CHOOSE ONE">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>MALE</x:String>
+                        <x:String>FEMALE</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+        <Label Text="DIGITAL" TextColor="#2C2C80" Grid.Row="8" Margin="20,0,0,0" />
+        <StackLayout Grid.Row="9" Grid.ColumnSpan="2" HorizontalOptions="Center" >
+            <Label Text="FINGERPRINT NEWBORN" HorizontalOptions="Center" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnNewborn" Image="finger.png" Grid.ColumnSpan="2" HorizontalOptions="Center"/> 
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
